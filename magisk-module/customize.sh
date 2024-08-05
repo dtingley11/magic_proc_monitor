@@ -5,7 +5,9 @@ if ! $BOOTMODE; then
 fi
 
 if [ "$KSU" == true ]; then
-    ln -s /data/adb/ksu/busybox "$MODPATH/busybox"
+    ln -s /data/adb/ksu/bin/busybox "$MODPATH/busybox"
+elif [ "$APATCH" == true ]; then
+    ln -s /data/adb/ap/bin/busybox "$MODPATH/busybox"
 else
     ln -s /data/adb/magisk/busybox "$MODPATH/busybox"
 fi
