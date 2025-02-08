@@ -30,7 +30,7 @@ jobs:
     - name: Build Zygisk
       run: sed -i "s/^FLAVOR=.*/FLAVOR=Zygisk/g" ./out/magisk-module/customize.sh
     - name: Upload Zygisk release
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: zygisk-proc-monitor
         path: out/magisk-module
